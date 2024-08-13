@@ -3,7 +3,8 @@ export default function wpPlugin() {
     return {
         name: "wp-plugin",
         buildStart() {
-            console.log("Build started!")
+            console.log("Modifying index.html for build...")
+            buildWp()
         },
         handleHotUpdate() {
             console.log("Modifying index.html...")
