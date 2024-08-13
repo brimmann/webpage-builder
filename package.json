@@ -3,13 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "bin": {
+    "wp": "bin/wp-builder.js"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "wp": "npx wp"
   },
   "devDependencies": {
-    "typescript": "^5.5.3",
+    "prettier": "3.3.3",
     "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "jsdom": "24.1.1"
   }
 }
