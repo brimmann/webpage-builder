@@ -1,4 +1,4 @@
-import buildWp from "./wp-builder"
+import buildWp from "./wp-plugin/wp-builder"
 export default function wpPlugin() {
     return {
         name: "wp-plugin",
