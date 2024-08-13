@@ -1,7 +1,6 @@
 {
   "name": "wp-builder",
   "type": "module",
-  "private": "false",
   "files": [
     "dist"
   ],
