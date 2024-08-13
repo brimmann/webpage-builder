@@ -2,10 +2,10 @@
 
 Multi-Page HTML Builder is a JavaScript library designed to streamline the development of single HTML pages by dividing them into multiple sections during development. When building the project, it combines these sections into a single HTML file.
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/brimmann/webpage-builder/.github%2Fworkflows%2Frelease.yml?branch=main)
-![GitHub Release](https://img.shields.io/github/v/release/brimmann/webpage-builder)
-![NPM Downloads](https://img.shields.io/npm/dw/webpage-builder)
-![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/brimmannn?style=social)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/brimmann/webpage-builder/.github%2Fworkflows%2Frelease.yml)
+![GitHub Release](https://img.shields.io/github/v/release/brimmann/webpage-builder) ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/brimmannn?style=social)
+<!-- ![NPM Downloads](https://img.shields.io/npm/dw/webpage-builder) -->
+
 
 ## Features
 
