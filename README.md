@@ -4,7 +4,7 @@ Multi-Page HTML Builder is a JavaScript library designed to streamline the devel
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/brimmann/webpage-builder/.github%2Fworkflows%2Frelease.yml)
 ![GitHub Release](https://img.shields.io/github/v/release/brimmann/webpage-builder) ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/brimmannn?style=social)
-<!-- ![NPM Downloads](https://img.shields.io/npm/dw/webpage-builder) -->
+![NPM Downloads](https://img.shields.io/npm/dw/webpage-builder)
 
 
 ## Features
@@ -23,7 +23,25 @@ npm install wp-builder
 ```
 
 ## Usage
-Create a vanilla vite project and then create a folder named **sections** inside your src folder and add file order.js to it. Add all your sections of html that you want to be part of yoru page and export and default from your order.js file.
+1. Create a vite project with vanilla template.
+2. Install this library.
+3. Add this library to your `vite.config.js` file.
+4. Create your sections in .html format in `src/sections` directory.
+5. Add `order.js` file in sections directory
+
+*vite.config.js*
+```javascript
+import { defineConfig } from "vite";
+import wpPlugin from "wp-plugin";
+
+
+export default defineConfig({
+    plugins: [wpPlugin()],
+    
+})
+```
+
+order.js defines the order of your sections in your `src/sections` directory.
 
 *sections/order.js*
 ```javascript
@@ -35,9 +53,7 @@ export default [
 
 ```
 
-This determine the order of sections that will be injected to your main html.
-
-An example directorty structure:
+An example directory structure:
 ```terminal
 ├───public
 │       vite.svg
