@@ -32,7 +32,7 @@ npm install wp-builder
 *vite.config.js*
 ```javascript
 import { defineConfig } from "vite";
-import wpPlugin from "wp-plugin";
+import wpPlugin from "webpage-builder";
 
 
 export default defineConfig({
