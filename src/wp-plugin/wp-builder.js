@@ -14,7 +14,7 @@ export default async function buildWp() {
   const orderFile = path.join(sectionsDir, "order.js");
   let orderArray;
   try {
-    const orderArrayModule = await import(pathToFileURL(orderFile).href);
+    const orderArrayModule = await import(`${pathToFileURL(orderFile).href}?cacheBust=${Date.now()}`);
     orderArray = orderArrayModule.default;
   } catch (err) {
     console.log(`order.js file not found in ${sectionsDir}`);

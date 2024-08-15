@@ -4,12 +4,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/wp-builder.cjs",
-  "module": "./dist/wp-builder.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
-      "import": "./dist/wp-builder.mjs",
-      "require": "./dist/wp-builder.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "repository": {

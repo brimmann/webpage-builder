@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import wpPlugin from "./src/wp-plugin";
+import wpPlugin from "./src/index";
 import { resolve } from "path";
 
 export default defineConfig({
