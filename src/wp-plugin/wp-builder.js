@@ -3,21 +3,34 @@ import path, { join } from "path";
 import { JSDOM } from "jsdom";
 import { format } from "prettier";
 import { pathToFileURL } from "url";
+import { existsSync } from "fs";
 
 export default async function buildWp() {
   console.log("Applying wp...");
 
   const sectionsDir = path.join(process.cwd(), "src/sections");
   const indexFile = path.join(process.cwd(), "index.html");
+  if(!existsSync(sectionsDir)) {
+    console.log(`Section directory not found at: ${sectionsDir}`)
+    return
+  }
+  if(!existsSync(indexFile)) {
+    console.log(`index.html file not found at: ${indexFile}`)
+    return
+  }
 
   console.log(`looking for order.js file in ${sectionsDir}`);
   const orderFile = path.join(sectionsDir, "order.js");
+  if(!existsSync(orderFile)) {
+    console.log(`order.js file not found at: ${orderFile}`)
+    return
+  }
   let orderArray;
   try {
     const orderArrayModule = await import(`${pathToFileURL(orderFile).href}?cacheBust=${Date.now()}`);
     orderArray = orderArrayModule.default;
   } catch (err) {
-    console.log(`order.js file not found in ${sectionsDir}`);
+    // console.log(`order.js file not found in ${sectionsDir}`);
     console.log(err);
   }
 
